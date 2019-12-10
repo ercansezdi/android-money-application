@@ -10,20 +10,22 @@
         android:id="@+id/gelir"
         android:layout_width="105dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="248dp"
+        android:layout_marginBottom="136dp"
         android:onClick="on_click_income"
         android:text="Gelir Ekle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/show"
+        android:id="@+id/delete_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="61dp"
         android:text="Toplam Bakiye: 0"
-        app:layout_constraintBottom_toTopOf="@+id/islemler"
+        app:layout_constraintBottom_toTopOf="@+id/islem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,16 +59,30 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/islem"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="164dp"
         android:ems="10"
-        android:hint="input money"
+        android:hint="Yapılan Harcama"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/islemler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/input"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show"
-        app:layout_constraintVertical_bias="0.465" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="25dp"
+        android:ems="10"
+        android:hint="Miktar"
+        android:inputType="textPersonName"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/islem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/islem" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
